@@ -1,0 +1,16 @@
+---
+job-name:    amaterasu-test
+flow:
+    - name: start
+      runner:
+          group: spark
+          type: pyspark
+      file: file.scala
+      exports:
+          odd: parquet
+    - name: step2
+      runner:
+          group: spark
+          type: scala 
+      file: file2.scala
+...
