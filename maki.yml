@@ -5,7 +5,7 @@ flow:
       runner:
           group: spark
           type: pyspark
-      file: file.scala
+      file: file.py
       exports:
           odd: parquet
     - name: step2
